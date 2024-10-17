@@ -4,7 +4,7 @@
         <x-link href='/connect' icon='fa fa-rocket'>Connect</x-link>
         <x-link href='/miners' icon='fas fa-user-astronaut'>Top 10</x-link>
         <x-link href='/blocks' icon='fa fa-cubes'>Blocks</x-link>
-        <x-link href='/payments' icon='nf nf-md-currency_sign'>Payments</x-link>
+        <x-link href='/payments' icon='fa fa-coins'>Payments</x-link>
 
         <div class="relative" x-data="{ open: false }">
             <z @click="open = !open" @click.away="open = false" class="dropdown-toggle">

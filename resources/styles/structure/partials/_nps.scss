@@ -1,0 +1,50 @@
+#nps-section {
+    width: 100%;
+
+    justify-content: space-evenly;
+
+    >div {
+        max-width: 33.3%;
+
+        h3 {
+            color: var(--cwd-nps-header);
+            font-family: 'Century Gothic', Segoe UI, Arial, sans-serif;
+        }
+
+        .row {
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+
+        .icon {
+            color: var(--cwd-nps-icon);
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+            padding-right: 5px;
+        }
+
+        .text {
+            color: var(--cwd-nps-text);
+        }
+
+        .value {
+            color: var(--cwd-nps-value);
+            padding-left: 3px;
+
+            &:nth-of-type(3) {
+                padding-left: 5px;
+            }
+        }
+
+        a.value {
+            color: #9ECFFF;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
