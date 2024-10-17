@@ -1,0 +1,21 @@
+nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: var(--cwd-nav-bg);
+    color: var(--cwd-nav-fg);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; // TODO - TEMPORARY UNTIL MEDIAs ARE COMPLETED - TODO //
+
+    .heading {
+        color: var(--cwd-nav-heading);
+    }
+
+    .active {
+        color: var(--cwd-nav-active-fg);
+    }
+}

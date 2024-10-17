@@ -1,0 +1,15 @@
+body {
+    @include reset;
+
+    background: var(--cwd-body-bg);
+    color: var(--cwd-body-fg);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
+}

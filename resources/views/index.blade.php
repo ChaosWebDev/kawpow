@@ -1,3 +1,5 @@
-<div>
-    <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
-</div>
+<x-layout title="{{ config('app.name') }}">
+    <main id="index">
+        Index
+    </main>
+</x-layout>
