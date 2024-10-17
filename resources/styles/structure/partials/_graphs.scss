@@ -1,10 +1,10 @@
 #graphs-section {
     width: 100%;
-
     margin-top: 2em;
 
-    display: grid;
-    grid-template-columns: repeat(3, 400px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     gap: 2em;
 
