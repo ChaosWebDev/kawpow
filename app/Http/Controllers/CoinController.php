@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Coin;
-use Illuminate\Http\Request;
-
 class CoinController extends Controller
 {
-    public function render(Coin $coin) {
+    public function render() {
+        $coin = config('coin');
         return view('index', compact('coin'));
     }
 }

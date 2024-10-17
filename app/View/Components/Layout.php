@@ -11,7 +11,7 @@ class Layout extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(public $title = null, public $theme = null)
     {
         //
     }
@@ -21,6 +21,6 @@ class Layout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layout');
+        return view('components.layout', ['title' => $this->title, 'theme' => $this->theme]);
     }
 }
