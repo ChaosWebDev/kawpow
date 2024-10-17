@@ -21,6 +21,6 @@ class Layout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layout', ['title' => $this->title, 'theme' => $this->theme]);
+        return view('layouts.layout', ['title' => $this->title, 'theme' => $this->theme]);
     }
 }

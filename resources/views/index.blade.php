@@ -1,5 +1,5 @@
 <x-layout title="{{ config('app.name') }}">
     <main id="index">
-        Index
+        INDEX
     </main>
 </x-layout>
