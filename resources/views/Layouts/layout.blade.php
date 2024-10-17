@@ -11,6 +11,10 @@
     <title>{{ $title ?? config('app.name') }}</title>
 
     @vite(['resources/js/app.js', 'resources/styles/styles.scss'])
+
+    <script>
+        const baseAPI = "{{ config('coin.baseURL') }}/{{ config('coin.poolName') }}";
+    </script>
 </head>
 
 <body>
