@@ -1,4 +1,7 @@
-@import "./dynamic/dynamic.scss";
+@import "./externals.scss";
 @import "./classes.scss";
 @import "./elements.scss";
+
+@import "./dynamic/dynamic.scss";
+
 @import "./structure/root.scss";
