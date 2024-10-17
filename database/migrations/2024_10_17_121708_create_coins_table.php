@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('coins', function (Blueprint $table) {
-            $table->id();
+            $table->string('symbol')->primary();
+            $table->string('pool_name')->unique();
+            $table->string('name')->index();
+            $table->string('scheme')->default('PLLNT');
+            $table->string('color')->comment('HEX Code for Color')->nullable()->default(null);
+            $table->string('icon_url')->nullable()->default(null);
+            $table->json('externals')->nullable()->default(null);
             $table->timestamps();
         });
     }
