@@ -2,8 +2,21 @@
     enctype="multipart/form-data">
     @csrf
 
+    <!-- Coin Name -->
+    <input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Name" autofocus>
+    @error('name')
+        <div class="error">{{ $message }}</div>
+    @enderror
+
+    <!-- Coin Symbol -->
+    <input type="text" name="symbol" id="symbol" value="{{ old('symbol') }}" placeholder="Pool Name" autofocus>
+    @error('symbol')
+        <div class="error">{{ $message }}</div>
+    @enderror
+
     <!-- Pool Name -->
-    <input type="text" name="pool_name" id="pool_name" value="{{ old('pool_name') }}" placeholder="Pool Name" autofocus>
+    <input type="text" name="pool_name" id="pool_name" value="{{ old('pool_name') }}" placeholder="Pool Name"
+        autofocus>
     @error('pool_name')
         <div class="error">{{ $message }}</div>
     @enderror
@@ -21,66 +34,29 @@
     @enderror
 
     <!-- Primary Color -->
-    <input type="color" name="primary_color" id="primary_color" value="{{ old('primary_color', '#060818') }}"
-        placeholder="Primary Color">
-    @error('primary_color')
+    <input type="color" name="color" id="color" value="{{ old('color', '#060818') }}" placeholder="Color">
+    @error('color')
         <div class="error">{{ $message }}</div>
     @enderror
 
-    <!-- Secondary Color -->
-    <input type="color" name="secondary_color" id="secondary_color" value="{{ old('secondary_color', '#0E1726') }}"
-        placeholder="Secondary Color">
-    @error('secondary_color')
-        <div class="error">{{ $message }}</div>
-    @enderror
+    <!-- Externals -->
+    <div class="column">
+        <div class="row">
+            <input type="text" name="externals[]" class='externalInput' value="{{ old('website') }}"
+                placeholder="External Site">
 
-    <!-- Website -->
-    <input type="text" name="website" id="website" value="{{ old('website') }}" placeholder="Website">
-    @error('website')
-        <div class="error">{{ $message }}</div>
-    @enderror
+            <span>
+                Icon <button type='button' class='arrow down'></button>
+                <button type='button' class='arrow up hidden'></button>
+            </span>
+        </div>
 
-    <!-- Explorer -->
-    <input type="text" name="explorer" id="explorer" value="{{ old('explorer') }}" placeholder="Explorer">
-    @error('explorer')
-        <div class="error">{{ $message }}</div>
-    @enderror
+        @error('website')
+            <div class="error">{{ $message }}</div>
+        @enderror
+    </div>
 
-    <!-- GitHub -->
-    <input type="text" name="github" id="github" value="{{ old('github') }}" placeholder="GitHub">
-    @error('github')
-        <div class="error">{{ $message }}</div>
-    @enderror
-
-    <!-- Discord -->
-    <input type="text" name="discord" id="discord" value="{{ old('discord') }}" placeholder="Discord">
-    @error('discord')
-        <div class="error">{{ $message }}</div>
-    @enderror
-
-    <!-- Forum -->
-    <input type="text" name="forum" id="forum" value="{{ old('forum') }}" placeholder="Forum">
-    @error('forum')
-        <div class="error">{{ $message }}</div>
-    @enderror
-
-    <!-- X -->
-    <input type="text" name="x" id="x" value="{{ old('x') }}" placeholder="X">
-    @error('x')
-        <div class="error">{{ $message }}</div>
-    @enderror
-
-    <!-- Market -->
-    <input type="text" name="market" id="market" value="{{ old('market') }}" placeholder="Market">
-    @error('market')
-        <div class="error">{{ $message }}</div>
-    @enderror
-
-    <!-- CoinGecko -->
-    <input type="text" name="coingecko" id="coingecko" value="{{ old('coingecko') }}" placeholder="CoinGecko">
-    @error('coingecko')
-        <div class="error">{{ $message }}</div>
-    @enderror
+    <button class="secondary" type='button'>Add External Link</button>
 
     <!-- Submit Button -->
     <button type="submit">Create Pool</button>
