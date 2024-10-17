@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+
+    .panel {
+        background: var(--cwd-panel-bg);
+        color: var(--cwd-panel-fg);
+
+        width: 165px;
+        height: 55px;
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        margin: 0.5em;
+        border-radius: 10px;
+
+        .left {
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            .heading {
+                font-family: 'Roboto', Segoe UI, Century Gothic, Arial, sans-serif;
+                color: var(--cwd-panel-header);
+                font-weight: 300;
+            }
+
+            .value {
+                font-family: Segoe UI, Century Gothic, Roboto, Arial, sans-serif;
+                color: #e5e5e5;
+            }
+        }
+
+        .icon {
+            height: 25px;
+            width: 25px;
+            font-size: 25px;
+
+            position: absolute;
+            top: 15px;
+            right: 10px;
+
+            display: inline-block;
+        }
+    }
+}
