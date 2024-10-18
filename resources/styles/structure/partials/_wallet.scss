@@ -1,0 +1,36 @@
+#walletFormSection {
+    @extend .column;
+    align-items: center;
+    max-width: calc((400px + 2em) * 3);
+
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+        @include reset;
+        width: 100%;
+        text-align: center;
+
+        margin-bottom: 0.5em;
+
+        font-variant: small-caps;
+        text-transform:capitalize;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 75% min-content;
+        width: 100%;
+        justify-content: center;
+
+        input,
+        button {
+            background: var(--cwd-panel-bg);
+            color: var(--cwd-panel-fg);
+            outline: none;
+            font-size: 1.25rem;
+            padding: 5px 10px;
+        }
+    }
+}
