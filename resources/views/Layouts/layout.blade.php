@@ -14,6 +14,7 @@
 
     <script>
         const baseAPI = "{{ config('coin.baseURL') }}/{{ config('coin.poolName') }}";
+        const explorer = "{{ config('coin.external.explorer', null) }}";
     </script>
 </head>
 

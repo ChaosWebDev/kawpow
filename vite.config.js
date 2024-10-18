@@ -7,7 +7,8 @@ export default defineConfig({
             input: [
                 'resources/styles/styles.scss',
                 'resources/js/app.js',
-                'resources/js/historical.js'],
+                'resources/js/historical.js',
+                'resources/js/data.js'],
             refresh: true,
         }),
     ],
