@@ -3,7 +3,6 @@ $(() => {
 
     fetchAllData(apiEndpoints)
         .then(data => {
-            console.log(data);
             // NETWORK PANEL
             $("#networkHashRate").html(formatHashrate(data.base.network.hashrate));
 
@@ -33,8 +32,6 @@ $(() => {
             $("#soloHashrate").html(formatHashrate(data.base.hashrate.solo));
             $("#soloConnectedMiners").html(counter(data.miners.solo));
             $("#soloLastBlockFound").html(lastBlockFound(data.blocks, 'solo'));
-
-
         })
         .catch(error => {
             console.error(error);

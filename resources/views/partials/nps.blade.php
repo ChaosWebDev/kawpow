@@ -19,35 +19,6 @@
             <span class="text">Blockchain Height:</span>
             <span class="value" id="networkHeight">TBD</span>
         </div>
-
-        {{--
-        ! NOT FOUND A WAY TO GET NETWORK DATA !
-        <div class="row">
-            <i class="fa fa-clock icon"></i>
-            <span class="text">Average Block Time:</span>
-            <span class="value" id="networkAverageBlockTime">TBD</span>
-        </div>
-
-        <div class="row">
-            <i class="fa fa-clock icon"></i>
-            <span class="text">Last Block Found:</span>
-            <span class="value" id="networkLastBlockFound">TBD</span>
-        </div>
-
-        <div class="row">
-            <i class="fa fa-coins icon"></i>
-            <span class="text">Last Reward:</span>
-            <span class="value" id="networkLastReward">0</span>
-            <span class="value">{{ strtoupper(config('coin.symbol')) }}</span>
-        </div>
-
-        <div class="row">
-            <i class="nf nf-oct-hash icon"></i>
-            <span class="text">Last Hash:</span>
-            <span class="value" id="networkLastHashPlaceholder">TBD</span>
-            <a class="value hidden" id="networkLastHash"></a>
-        </div>
-        --}}
     </div>
 
     <div id="pool-section" class='card'>
