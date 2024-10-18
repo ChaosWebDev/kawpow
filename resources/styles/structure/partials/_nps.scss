@@ -3,8 +3,13 @@
     justify-content: space-evenly;
     margin-top: 1em;
 
-    >div {
-        max-width: 33.3%;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+        width: 275px;
+        min-width: 275px;
 
         h3 {
             color: var(--cwd-nps-header);

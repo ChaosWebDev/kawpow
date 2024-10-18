@@ -1,6 +1,6 @@
 main {
-    margin: 1em;
-
-    max-height: 100vh;
-    overflow: auto;
+    padding: 1em;
+    height: 100%;
+    margin-top: var(--cwd-nav-height);
+    margin-bottom: var(--cwd-footer-height);
 }

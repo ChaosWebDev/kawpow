@@ -1,0 +1,11 @@
+footer {
+    @extend .row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--cwd-footer-height);
+    background-color: var(--cwd-nav-bg);
+    color: var(--cwd-nav-fg);
+    z-index: 2;
+}
