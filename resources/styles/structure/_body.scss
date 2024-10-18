@@ -4,14 +4,13 @@ body {
     background: var(--cwd-body-bg);
     color: var(--cwd-body-fg);
 
-    overflow-y: auto;
+    overflow-y: scroll;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
-
     height: 100%;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
