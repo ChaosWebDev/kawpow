@@ -5,6 +5,8 @@ $(() => {
         .then(data => {
             // NETWORK PANEL
             $("#networkHashRate").html(formatHashrate(data.base.network.hashrate));
+            $("#headerNetworkHashrate").html(formatHashrate(data.base.network.hashrate));
+            $("#headerMinerHashrate").html(formatHashrate(data.base.hashrate.shared));
 
             $("#networkLastBlockFound").html(lastBlock(data.blocks));
             $("#networkDifficulty").html(formatDifficulty(data.base.network.difficulty));
