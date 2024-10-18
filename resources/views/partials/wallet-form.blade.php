@@ -9,6 +9,4 @@
             <span>Search</span>
         </button>
     </form>
-
-    {{-- GWJkafXF4G1VcknrZSBKEeS9kTCcohQt8N --}}
 </section>

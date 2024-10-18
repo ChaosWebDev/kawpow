@@ -8,7 +8,9 @@ export default defineConfig({
                 'resources/styles/styles.scss',
                 'resources/js/app.js',
                 'resources/js/historical.js',
-                'resources/js/data.js'],
+                'resources/js/data.js',
+                'resources/js/wallet.js'
+            ],
             refresh: true,
         }),
     ],

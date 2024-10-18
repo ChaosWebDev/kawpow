@@ -44,3 +44,34 @@
     border-radius: 10px;
     padding: 1em;
 }
+
+.panel {
+    background: var(--cwd-panel-bg);
+    color: var(--cwd-panel-fg);
+
+    box-sizing: border-box;
+
+    padding: 0.25em;
+
+    @extend .column;
+
+    .heading {
+        font-family: Segoe UI, Century Gothic, 'Roboto', Arial, sans-serif;
+        color: var(--cwd-chart-heading);
+        padding: 0.75em;
+    }
+
+    canvas {
+        height: 175px !important;
+        width: calc(400px - 0.5em) !important;
+        box-sizing: content-box;
+    }
+}
+
+
+.sub-card {
+    background: var(--cwd-body-bg);
+    color: var(--cwd-body-fg);
+    border-radius: 10px;
+    padding: 0.25em 0.5em;
+}

@@ -17,20 +17,32 @@ window.formatDifficulty = (rate) => {
     return rate.replace(/\/s$/, '');
 }
 
-window.formatSeconds = (seconds) => {
+window.formatSeconds = (seconds, short = false) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const remainingSeconds = seconds % 60;
 
     const formatUnit = (value, unit) => {
-        return value === 1 ? `${value} ${unit}` : `${value} ${unit}s`;
+        value = Number(value).toFixed(0);
+
+        if (!short) {
+            return value === 1 ? `${value} ${unit}` : `${value} ${unit}s`;
+        } else {
+            return `${value}${unit}`;
+        }
     };
 
     let result = [];
 
-    if (hours > 0) result.push(formatUnit(hours, 'Hour'));
-    if (minutes > 0) result.push(formatUnit(minutes, 'Minute'));
-    if (remainingSeconds > 0 || result.length === 0) result.push(formatUnit(remainingSeconds, 'Second'));
+    if (short) {
+        if (hours > 0) result.push(formatUnit(hours, 'H'));
+        if (minutes > 0) result.push(formatUnit(minutes, 'M'));
+        if (remainingSeconds > 0 || result.length === 0) result.push(formatUnit(remainingSeconds, 'S'));
+    } else {
+        if (hours > 0) result.push(formatUnit(hours, 'Hour'));
+        if (minutes > 0) result.push(formatUnit(minutes, 'Minute'));
+        if (remainingSeconds > 0 || result.length === 0) result.push(formatUnit(remainingSeconds, 'Second'));
+    }
 
     return result.join(', ');
 };

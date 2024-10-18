@@ -15,7 +15,7 @@
         margin-bottom: 0.5em;
 
         font-variant: small-caps;
-        text-transform:capitalize;
+        text-transform: capitalize;
     }
 
     form {
@@ -31,6 +31,66 @@
             outline: none;
             font-size: 1.25rem;
             padding: 5px 10px;
+        }
+    }
+}
+
+#walletSection {
+    @extend .column;
+
+    width: fit-content;
+    max-width: 90vw;
+
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
+    .card-holder {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 1em;
+
+        .card {
+            display: grid;
+            grid-template-areas: 'heading icon'
+                'value value'
+                'notes notes';
+            grid-template-rows: auto auto 1fr;
+            grid-template-columns: 1fr min-content;
+            gap: 5px;
+            align-items: center;
+
+            padding: 1em;
+            width: 225px;
+            height: 120px;
+
+            box-sizing: content-box;
+
+            .heading {
+                @include reset;
+                grid-area: heading;
+            }
+
+            i {
+                grid-area: icon;
+                font-size: 40px;
+            }
+
+            .value {
+                grid-area: value;
+                font-size: 1.25em;
+                text-align: center;
+
+                @extend .row;
+                gap: 0.25em;
+            }
+
+            .notes {
+                grid-area: notes;
+                font-size: .8rem;
+                font-style: italic;
+                text-align: center;
+            }
         }
     }
 }
